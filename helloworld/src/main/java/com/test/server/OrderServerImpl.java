@@ -7,14 +7,14 @@ import javax.annotation.Resource;
 import java.util.Map;
 
 @Service
-public class OrderServerImpl implements OrderServer{
+public class OrderServerImpl implements OrderServer {
 
-    @Resource
+    @Resource()
     private OrderMapper orderMapper;
 
     @Override
     public String search(String id) {
-        if("1".equals(id)){
+        if ("1".equals(id)) {
             Map info = orderMapper.search("1");
             System.out.println(info.toString());
 
